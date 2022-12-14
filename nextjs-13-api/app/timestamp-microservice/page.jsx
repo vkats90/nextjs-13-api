@@ -14,7 +14,7 @@ export default function TimestampAPI() {
         </ul>
 
         <h3>Example Output:</h3>
-        <p>
+        <p className={styles.code}>
             <code>{'{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}'}</code>
         </p>
         </div>

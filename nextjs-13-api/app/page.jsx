@@ -20,11 +20,11 @@ export default function Home() {
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href="/header-parser-microservice"
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
+            <h2>Headparser &rarr;</h2>
+            <p>Get you client and IP information</p>
           </a>
 
           <a
@@ -46,13 +46,13 @@ export default function Home() {
             <p>Deploy your Next.js site to a public URL with Vercel.</p>
           </a>
           <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="/filemetadata-microservice"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.card}
           >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
+            <h2>File Metadata &rarr;</h2>
+            <p>Upload a file and get information about it</p>
           </a>
         </div>
       </main>
