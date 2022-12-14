@@ -6,18 +6,17 @@ export default function Home() {
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
+          freeCodeCamp API exercise
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
+          Choose any of the following Microservices:
         </p>
 
         <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
+          <a href="/timestamp-microservice" className={styles.card}>
+            <h2>Timestamp &rarr;</h2>
+            <p>Get the time in UTC and Unix</p>
           </a>
 
           <a
@@ -28,6 +27,24 @@ export default function Home() {
             <p>Explore the Next.js 13 playground.</p>
           </a>
 
+          <a
+            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.card}
+          >
+            <h2>Deploy &rarr;</h2>
+            <p>Deploy your Next.js site to a public URL with Vercel.</p>
+          </a>
+          <a
+            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.card}
+          >
+            <h2>Aniother one &rarr;</h2>
+            <p>Deploy your Next.js site to a public URL with Vercel.</p>
+          </a>
           <a
             href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
