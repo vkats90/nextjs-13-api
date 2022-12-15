@@ -1,8 +1,9 @@
 import dbConnect from '../../lib/dbConnect'
-import UrlData from '../../models/UrlData'
 import validUrl from 'valid-url'
 import crypto from 'crypto'
 import Cors from 'cors'
+import findOneByUrl from '../../lib/findOneByUrl'
+import createUrlEntry from '../../lib/createUrlEntry'
 
 const cors = Cors({
     methods: ['POST', 'GET', 'HEAD'],
@@ -19,27 +20,6 @@ function runMiddleware(req,res,fn) {
       })
     })
 }
-
-function done(err) {
-    if (err) console.log(err)
-  }
-
-const createUrlEntry = (array) => {
-    UrlData.create(array,(err,data)=>{
-      if (err) return done(err)
-      return data
-    })
-  };
-  
-  const findOneByUrl = async (url) => {
-    try {
-     const urlFind = await UrlData.findOne({shortUrl: url})
-    return urlFind;
-    } catch(err) {
-      done(err);
-    }
-  };
-
 
 export default async function UrlShortener (req,res) {
     

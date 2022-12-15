@@ -1,6 +1,7 @@
 import dbConnect from '../../../lib/dbConnect'
 import UrlData from '../../../models/UrlData'
 import Cors from 'cors'
+import findOneByUrl from '../../../lib/findOneByUrl'
 
 const cors = Cors({
   methods: ['POST', 'GET', 'HEAD'],
@@ -18,14 +19,6 @@ function runMiddleware(req,res,fn) {
   })
 }
 
-const findOneByUrl = async (url) => {
-    try {
-     const urlFind = await UrlData.findOne({shortUrl: url})
-    return urlFind;
-    } catch(err) {
-      done(err);
-    }
-  };
 
 export default async function ShortUrl (req,res) {
     await runMiddleware(req, res, cors)
