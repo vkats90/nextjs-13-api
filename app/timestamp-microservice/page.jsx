@@ -20,7 +20,7 @@ export default function TimestampAPI() {
         </div>
         <div clasName={styles.footer}>
         <p>
-            By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+            By Vlad Kats
         </p>
         </div>
         </div>

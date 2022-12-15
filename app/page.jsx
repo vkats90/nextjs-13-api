@@ -28,17 +28,15 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
+            href="/url-shortener-microservice"
             rel="noopener noreferrer"
             className={styles.card}
           >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
+            <h2>Url Shortener &rarr;</h2>
+            <p>input your url and get a shorter one</p>
           </a>
           <a
             href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
             rel="noopener noreferrer"
             className={styles.card}
           >
@@ -47,7 +45,6 @@ export default function Home() {
           </a>
           <a
             href="/filemetadata-microservice"
-            target="_blank"
             rel="noopener noreferrer"
             className={styles.card}
           >
@@ -59,14 +56,11 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/vkats90"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          Made by Vlad Kats
         </a>
       </footer>
     </div>

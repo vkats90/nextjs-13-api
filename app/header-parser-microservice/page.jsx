@@ -18,7 +18,7 @@ return(
       </div>
       <div className={styles.footer}>
         <p>
-          by <a href="https://www.freecodecamp.org">freeCodeCamp</a>
+          by Vlad Kats
         </p>
       </div>
    </body>
