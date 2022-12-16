@@ -27,11 +27,13 @@ label {
 
 input {
   padding: 5px;
+  margin:5px;
 }
 
 input[type='text'] {
   width: 220px;
   text-align: center;
+  font-size: medium;
 }
 
 @media (prefers-color-scheme: dark) {

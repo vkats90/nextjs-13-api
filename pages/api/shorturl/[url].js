@@ -1,7 +1,7 @@
 import dbConnect from '../../../lib/dbConnect'
 import UrlData from '../../../models/UrlData'
 import Cors from 'cors'
-import findOneByUrl from '../../../lib/findOneByUrl'
+import {findOneByUrl} from '../../../lib/UrlFunctions'
 
 const cors = Cors({
   methods: ['POST', 'GET', 'HEAD'],

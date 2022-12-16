@@ -36,12 +36,12 @@ export default function Home() {
             <p>input your url and get a shorter one</p>
           </a>
           <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="/exercise-tracker"
             rel="noopener noreferrer"
             className={styles.card}
           >
-            <h2>Aniother one &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
+            <h2>Exercise Tracker &rarr;</h2>
+            <p>Log in and track your exercises</p>
           </a>
           <a
             href="/filemetadata-microservice"

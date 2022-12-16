@@ -2,8 +2,9 @@ import dbConnect from '../../lib/dbConnect'
 import validUrl from 'valid-url'
 import crypto from 'crypto'
 import Cors from 'cors'
-import findOneByUrl from '../../lib/findOneByUrl'
-import createUrlEntry from '../../lib/createUrlEntry'
+import {findOneByUrl,createUrlEntry} from '../../lib/UrlFunctions'
+
+
 
 const cors = Cors({
     methods: ['POST', 'GET', 'HEAD'],
