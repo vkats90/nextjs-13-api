@@ -27,7 +27,7 @@ export default async function (req,res) {
         let id = await findUserByName(req.body.username)
         if (id == null) {
         await createUser(req.body.username);
-        id = await findUserByName(req.body.username)
+        id = await findUserByName(req.body.username);
         }
         res.json({"username":req.body.username,"_id":id._id})
     }
