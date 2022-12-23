@@ -4,9 +4,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 export default function Home() {
-  function handleClick() {
-    console.log('hello');
-}
+
 
   return (
     <div className={styles.container}>
@@ -18,7 +16,7 @@ export default function Home() {
         <p className={styles.description}>
           Choose any of the following Microservices:
         </p>
-        <button onClick={handleClick}>Click me</button>
+
         <div className={styles.grid}>
           <a href="/timestamp-microservice" className={styles.card}>
             <h2>Timestamp &rarr;</h2>

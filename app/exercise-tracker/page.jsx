@@ -7,8 +7,7 @@ export default function exerciseTracker() {
 
     const [_id,setID]=useState('')
     
-    const handleSubmit = async (event) => {    
-        console.log('I got Here')
+    const handleSubmit = async (event) => {   // currently unnsecessary  
         // Stop the form from submitting and refreshing the page.
         event.preventDefault()
 
@@ -24,8 +23,11 @@ export default function exerciseTracker() {
         const JSONdata = JSON.stringify(data)
         
         // API endpoint where we send form data.
-        const endpoint = '/api/'+ event.target.id +'/exercises'
+        const endpoint = '/api/users/'+ event.target.uid.value +'/exercises'
 
+        console.log(endpoint);
+
+        setID(endpoint)
         // Form the request for sending data to the server.
         const options = {
             // The method is POST because we are sending data.
@@ -36,32 +38,33 @@ export default function exerciseTracker() {
             },
             // Body of the request is the JSON data we created above.
             body: JSONdata,
+            redirect: 'manual'
         }
-
+        console.log(options)
         // Send the form data to our forms API on Vercel and get a response.
         const response = await fetch(endpoint, options)
-
+        
+        
+        console.log(response)
         // Get the response data from server as JSON.
         // If server returns the name submitted, that means the form works.
         const result = await response.json()
-        alert(`Is this your full name: ${result.data}`)
+        console.log(result)
+        
+        //alert(`Is this your full name: ${result.data}`)
     }
 
-    function listener() {
-        console.log('hello')
-    }    
 
     function uidValue(event) {
-        let id = event.target.value;
-        setID(id);
-        console.log(_id)
+        const endpoint = '/api/users/'+ event.target.value +'/exercises'
+        console.log(endpoint);
+        setID(endpoint)
     }
 
     return(
         <body>
             <div className={styles.main}>
                 <h1 className={styles.title}>Exercise tracker</h1>
-                <button onClick={listener}>Hello</button>
                 <div className={styles.grid}>
                     <form action="/api/users" method="post">
                         <fieldset>
@@ -71,7 +74,7 @@ export default function exerciseTracker() {
                         <input type="submit" value="Submit" />
                         </fieldset>
                     </form>
-                    <form  id="exercise-form" method="post">
+                    <form  action={_id} id="exercise-form" method="post" >
                         <fieldset>
                             <legend>Add exercises</legend>
                             <p><code>POST /api/users/:_id/exercises</code></p>
@@ -90,16 +93,6 @@ export default function exerciseTracker() {
                 <p><strong>[ ]</strong> = optional</p>
                 <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p> 
     </div> 
-           {/*  <script>
-            const exerciseForm = document.getElementById("exercise-form");
-
-            exerciseForm.addEventListener("submit", () => {
-                const userId = document.getElementById("uid").value;
-                exerciseForm.action = `/api/users/${userId}/exercises`;
-
-                exerciseForm.submit();
-            });
-        </script> */}
         </body>
     )
 }

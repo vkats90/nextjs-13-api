@@ -24,8 +24,9 @@ export default async function (req,res) {
     await dbConnect();
 
     req.body.date?req.body.date+='T00:00:00':undefined;
-    if (!req.body.date) req.body.date = Date.now();
-    let dateFormat = new Date(req.body.date).toDateString();
+    let dateFormat;
+    if (!req.body.date) dateFormat = new Date().toDateString()
+    else  dateFormat = new Date(req.body.date).toDateString();
     let user = await addExerciseToUser(req.query.id,req.body.description,req.body.duration,dateFormat);
     res.json({'_id':user._id,'username':user.username,'date':dateFormat,'duration':Number(req.body.duration),'description':req.body.description})
 }
