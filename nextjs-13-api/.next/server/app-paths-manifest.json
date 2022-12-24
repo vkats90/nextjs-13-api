@@ -1,0 +1,4 @@
+{
+  "/page": "app/page.js",
+  "/timestamp-microservice/page": "app/timestamp-microservice/page.js"
+}
