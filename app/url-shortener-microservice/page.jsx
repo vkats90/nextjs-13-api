@@ -10,7 +10,7 @@ export default function UrlShortenerUI () {
                     <form action="/api/shorturl" method="post">
                     <fieldset>
                         <legend>URL Shortener</legend>
-                        <label for="url_input">URL: </label>
+                        <label htmlFor="url_input">URL: </label>
                         <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
                         <input type="submit" value="POST URL" />
                     </fieldset>

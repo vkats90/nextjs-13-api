@@ -21,7 +21,7 @@ export default function TimestampAPI() {
             <code>{'{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}'}</code>
         </p>
         </div>
-        <div clasName={styles.footer}>
+        <div className={styles.footer}>
         <p>
             By Vlad Kats
         </p>
